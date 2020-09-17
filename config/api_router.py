@@ -1,15 +1,6 @@
-from django.conf import settings
-from rest_framework.routers import DefaultRouter, SimpleRouter
-
-from sentinel_users.users.api.views import UserViewSet
-
-if settings.DEBUG:
-    router = DefaultRouter()
-else:
-    router = SimpleRouter()
-
-router.register("users", UserViewSet)
-
+from django.urls import include, path
 
 app_name = "api"
-urlpatterns = router.urls
+urlpatterns = [
+    path('users', include('sentinel_users.users.api.urls')),
+]
