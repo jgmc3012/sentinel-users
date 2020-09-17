@@ -276,3 +276,6 @@ sentinel_users/media/
 .env
 .envs/*
 !.envs/.local/
+
+# IDE
+.vscode/
