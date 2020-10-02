@@ -9,6 +9,9 @@ class UserFactory(DjangoModelFactory):
 
     username = Faker("user_name")
     email = Faker("email")
+    first_name = Faker("first_name")
+    last_name = Faker("last_name")
+    country = "USA"
     name = Faker("name")
 
     @post_generation

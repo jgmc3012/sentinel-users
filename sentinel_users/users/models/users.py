@@ -12,6 +12,8 @@ class User(AbstractUser):
     name = CharField(_("Name of User"), blank=True, max_length=255)
     country = CountryField()
 
+    REQUIRED_FIELDS = ['email', 'country']
+
     def get_absolute_url(self):
         """Get url for user's detail view.
 
